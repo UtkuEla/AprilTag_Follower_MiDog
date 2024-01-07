@@ -27,12 +27,12 @@
    -
 
    ```bash
-   $ git clone -b group1 git@collaborating.tuhh.de:b1/teaching/classes/construction-robotics-ws-2022_23.git
+   $ git clone SSH or HTTPS
    ```
 
 2. ## Go to the workspace:
    ```bash
-   $ cd construction-robotics-ws-2022_23/main
+   $ cd Final Code Base
    ```
 3. Edit main configuration variables in settings.yaml if required:
 
@@ -47,10 +47,7 @@
    $ python AprilTagFollowerFinal_v4.py
    ```
 
-# 3- CNN:
-
-> **_NOTE:_** <br />
-> 1- The actual implementation of this Keras model is not mentioned so feel free to use a new model with differnent weights and put it in the same directoty then run the file.
+# CNN Supported Version:
 
 1. Go to directory.
 
@@ -63,4 +60,5 @@
 2. ## Test model:
    ```bash
    $ python followerwithCNN.py
+   $ python AprilTagFollower_withCNNsupport.py
    ```
