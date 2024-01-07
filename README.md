@@ -5,42 +5,6 @@
 [![Gazebo](https://img.shields.io/badge/GAZEBO-orange?logo=gazebo&logoColor=white)](https://gazebosim.org/home)
 [![React](https://img.shields.io/badge/REACT-blue?logo=react&logoColor=white)](https://reactjs.org/)
 
-<br />
-<br />
-<br />
-
-![](./assets/main_controller.png)
-
-# Project Structure
-
-- ## 1- main: (Main and final implementation of apriltag following process from v0:v4)
-
-      - **AprilTagFollowerFinal_v0**:  First version of apriltag follower and robot controller proecess.
-      - **AprilTagFollowerFinal_v4**:  Final implementation of apriltag following proecess.
-
-  <br />
-
-- ## 2- utils : (helper files for apriltag detection)
-
-  - **CameraCalibration**: This script is for generating camera parameters like K matrix, distortion array .
-  - **ApriltagDetector**: To Detect the apriltag using the above calibrated camera and estimate its position.
-  - **Controller**: To control the bittle robot using by sending serial commands from raspberrypi to NyBoard.
-  - **SerialCommunication, ardSerial**: those utils' contain the main functions required for serial communication.
-  - **main**: This is the main script that implement the complete process by estimating the camera position using [ApriltagDetector](https://collaborating.tuhh.de/b1/teaching/classes/construction-robotics-ws-2022_23/-/blob/group1/bittle_ws/ApriltagDetector.py) and controlling bittle robot using [controller](https://collaborating.tuhh.de/b1/teaching/classes/construction-robotics-ws-2022_23/-/blob/group1/bittle_ws/controller.py)
-
-  - **calibrationResults.yaml**: This yaml file contains the camera parameters like K matrix and distortion array.
-  - **settings.yaml**: This configuration file used to dynamically change some required parameters during the control process such as:
-    remoteControl, aprilTagLocalization.
-
-<br />
-
-- ## 3- CNN: (Pretrained- CNN Model)
-  - Trial implementation of Convolution Neural Network pretrained model to estimate Apriltag position.
-
-<br />
-
-<br />
-
 |                                                                    Bittle Model                                                                     |                                             Apriltags                                              |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
 | ![](https://hackster.imgix.net/uploads/attachments/1350269/hackster-front_O66b4x4vua.gif?auto=format%2Ccompress&gifq=35&w=900&h=675&fit=min&fm=mp4) | ![](https://cdn.shopify.com/s/files/1/0292/0693/7678/files/apriltag-pad_1_grande.png?v=1594511445) |
@@ -56,26 +20,22 @@
 <img  src="./assets/follow.gif" />
 </p>
 
-1. Clone this project.
-   -
+1. ## Clone this project.
    ```bash
    $ cd construction-robotics-ws-2022_23/simulation
    ```
-2. Building code in a catkin workspace and adding the packages to current running local ros.
-   -
+2. ## Building code in a catkin workspace and adding the packages to current running local ros.
    ```bash
    $ catkin_make
    ```
    ```bash
    $ source devel/setup.bash
    ```
-3. Open the simulation environment.
-   -
+3. ## Open the simulation environment.
    ```bash
    $ roslaunch bittle_gazebo simulation.launch
    ```
-4. Spawn Bittle Model (in new terminal).
-   -
+4. ## Spawn Bittle Model (in new terminal).
    ```bash
    $ source devel/setup.bash
    ```
@@ -89,8 +49,7 @@
    ```bash
    $ roslaunch apriltag_pose_estimation apriltag_detector.launch
    ```
-6. Follow apriltag (in new terminal).
-   -
+6. ## Follow apriltag (in new terminal).
    ```bash
    $ source devel/setup.bash
    ```
@@ -110,8 +69,7 @@
    $ git clone -b group1 git@collaborating.tuhh.de:b1/teaching/classes/construction-robotics-ws-2022_23.git
    ```
 
-2. Go to the workspace:
-   -
+2. ## Go to the workspace:
    ```bash
    $ cd construction-robotics-ws-2022_23/main
    ```
@@ -123,8 +81,7 @@
    remoteControl, aprilTagLocalization, etc...
    ```
 
-4. run final version file:
-   -
+4. ## run final version file:
    ```bash
    $ python AprilTagFollowerFinal_v4.py
    ```
@@ -142,8 +99,7 @@
    $ cd construction-robotics-ws-2022_23/CNN
    ```
 
-2. Test model:
-   -
+2. ## Test model:
    ```bash
    $ python followerwithCNN.py
    ```
