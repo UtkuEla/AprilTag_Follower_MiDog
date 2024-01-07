@@ -1,0 +1,4 @@
+remoteControl: True
+videostream: True
+aprilTagLocalization: False
+safeDistance: 0.1
