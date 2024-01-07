@@ -11,7 +11,6 @@ There are different decions the robot can make, which are
 2-> Turning left or right to follow the AprilTag
 3-> Stopping when the AprilTag is reached.  
 
-For further inquiries about this script and CNN model please contact: utku.elagoez@tuhh.de
 """
 
 import threading
